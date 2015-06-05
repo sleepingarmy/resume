@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--google font-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+    <!--google font-->
+</head>
+
+<body>
+  <section class='content'>
+
+    <div class='heading'>
+      <h1>Social Media</h1>
+    </div>
+
+    <p><% @instagram.site %></p>
+    <a href="http://www.instagram.com/sleepingarmy">instagram</a>
+
+    <p><%#  = @snapchat.where(id: 2).site %></p>
+    <p>snapchat: sleepingarmy </p>
+
+<%= @hi %>
+
+  </section>
+</body>
+
+</html>

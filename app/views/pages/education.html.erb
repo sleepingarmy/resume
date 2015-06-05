@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--google font-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+    <!--google font-->
+</head>
+
+<body>
+  <section class='content'>
+
+    <div class='heading'>
+      <h1>Education History</h1>
+    </div>
+
+    <p>I graduated from Utah State University in 2014 having studied math and chemistry.  I'm now putting my problem solving and logic skills to use as I attend DPL.</p>
+    
+    <div class="work">
+      <% @education.each do |school| %>
+        <p class="underline"> <%= school.school %> </p>
+        <p> <%= school.dates %> </p>
+      <% end %>
+    </div>
+
+  </section>
+</body>
+</html>

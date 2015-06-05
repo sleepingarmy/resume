@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--google font-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+    <!--google font-->
+</head>
+<body>
+
+<header class="header">
+  <a href="<%= root_path %>">home</a>
+  <a href="<%= about_path %>">about</a>
+  <a href="<%= history_path %>">work history</a>
+  <a href="<%= education_path %>">education</a>
+  <a href="<%= social_media_path %>">social media</a>
+</header>
+
+<%= yield %>
+
+<footer class="footer">
+  copyright &copy; <%= Time.now.year %>
+</footer>
+
+</body>
+</html>

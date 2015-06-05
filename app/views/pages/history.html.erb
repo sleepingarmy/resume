@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--google font-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+    <!--google font-->
+</head>
+
+<body>
+  <section class='content'>
+
+    <div class='heading'>
+      <h1>Work History</h1>
+    </div>
+
+    <p>While in college, I worked at my family's fabric store.  I loved being in a creative space, but decided to pursue programming as a career instead of the world of textiles.  I still hold a place in my heart for sewing and fabric, and maybe one day I can combine my programming skills and love for the sewing community!  See more of my work history below.</p>
+
+     <div class="work">
+
+      <% @histories.each do |history| %>
+        <p><%= link_to(history.employer, history_path(history.id))%></p>
+      <% end %>
+    </div>
+
+  <section>
+</body>
+</html>
